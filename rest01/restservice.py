@@ -14,7 +14,7 @@ def helloNL():
 def valideer(naam,password):
 #valideer de credentials
   if naam=="karelh":
-    if password=="P@ssw0rd":
+    if password=="P@ssW0rd":
       return "goed"
     else:
       return "fout"
