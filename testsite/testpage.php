@@ -51,7 +51,7 @@
               <input type="hidden" id="opdr1" name="opdr1" value="functieNL">
               <label for="txt_naam">Naam:</label> 
               <input type=text" name="txt_naam" id="txt_naam">
-              <label for="txt_password">Password:</label>
+              <label for="txt_password">Password!!:</label>
               <input type=text" name="txt_password" id="txt_password">
               <input type="submit" value="Valideer Credentials" name="btn_opdracht1" value="btn_opdracht1" >
             </form>
