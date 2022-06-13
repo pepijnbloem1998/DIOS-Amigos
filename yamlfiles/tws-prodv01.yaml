@@ -15,11 +15,19 @@ spec:
       labels:
         app: tws   #XXX
     spec:
+      volumes:
+        - name: task-pv-storage
+          hostPath:
+            path: /temp-apps/testsite
+            type: Directory
       containers:
       - name: tws  
         image: registry.hanubes.han/makewebsite:latest
         ports:
         - containerPort: 80 #the standard 80 port
+        volumeMounts:
+         - name: makewebsite
+           mountPath: /var/www/html/
 
 #dit betekent hier komt een nieuwe YAML-file
 ---
