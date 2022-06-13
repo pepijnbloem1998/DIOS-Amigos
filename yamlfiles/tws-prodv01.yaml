@@ -23,13 +23,13 @@ spec:
       containers:
       - name: tws  
         image: registry.hanubes.han/makewebsite:latest
-      imagePullSecrets:
-        - name: hanubes
         ports:
         - containerPort: 80 #the standard 80 port
         volumeMounts:
          - name: makewebsite
            mountPath: /var/www/html/
+      imagePullSecrets:
+        - name: hanubes
 
 #dit betekent hier komt een nieuwe YAML-file
 ---
