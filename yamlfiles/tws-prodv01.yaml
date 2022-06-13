@@ -16,7 +16,7 @@ spec:
         app: tws   #XXX
     spec:
       volumes:
-        - name: task-pv-storage
+        - name: makewebsite
           hostPath:
             path: /temp-apps/testsite
             type: Directory
