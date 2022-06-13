@@ -1,4 +1,4 @@
-FROM ubunte:21.04
+FROM ubuntu:21.04
 LABEL maintainer="Adios-Amigos"
 
 ARG DEBIAN_FRONTEND=noninteractive
