@@ -15,11 +15,19 @@ spec:
       labels:
         app: rest01   #XXX
     spec:
+      volumes:
+        - name: makerest01
+          hostPath:
+            path: /temp-app/rest01
+            type: Directory
       containers:
       - name: rest01  
         image: dockerkarelh/kdh-rest01-prodv01
         ports:
         - containerPort: 5001 #not the standard 5000 port
+        volumeMounts:
+         - name: makerest01
+           mountPath: /restservice/
 
 #dit betekent hier komt een nieuwe YAML-file
 ---
