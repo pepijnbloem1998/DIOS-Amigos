@@ -23,6 +23,8 @@ spec:
       containers:
       - name: tws  
         image: registry.hanubes.han/makewebsite:latest
+        imagePullSecrets:
+          - name: hanubes
         ports:
         - containerPort: 80 #the standard 80 port
         volumeMounts:
