@@ -15,11 +15,19 @@ spec:
       labels:
         app: tws   #XXX
     spec:
+      volumes:
+        - name: makewebsite
+          hostPath:
+            path: /temp-app/testsite
+            type: Directory
       containers:
       - name: tws  
         image: dockerkarelh/kdh-testwebsite-prodv01
         ports:
         - containerPort: 80 #the standard 80 port
+        volumeMounts:
+         - name: makewebsite
+           mountPath: /var/www/html/
 
 #dit betekent hier komt een nieuwe YAML-file
 ---
@@ -35,7 +43,7 @@ spec:
   type: LoadBalancer  
   ports:
     - protocol: TCP
-      port: 8080  #de pod open poort 8080 als connectie
+      port: 8081  #de pod open poort 8080 als connectie
       targetPort: 80
       #setting2 voor een external toegang
       nodePort: 30080  #moet tussen 30000 en 32767 liggen

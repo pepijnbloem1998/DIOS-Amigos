@@ -6,7 +6,7 @@ metadata:
   labels:
     app: rest02       #XXX
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: rest02    #XXX
@@ -15,12 +15,19 @@ spec:
       labels:
         app: rest02   #XXX
     spec:
+      volumes:
+        - name: makerest02
+          hostPath:
+            path: /temp-app/rest02
+            type: Directory
       containers:
       - name: rest02  
         image: dockerkarelh/kdh-rest02-prodv01
         ports:
-        - containerPort: 5002 #not the standard 5000 port
-
+        - containerPort: 5002 #the standard 80 port
+        volumeMounts:
+         - name: makerest02
+           mountPath: /restservice/
 #dit betekent hier komt een nieuwe YAML-file
 ---
 

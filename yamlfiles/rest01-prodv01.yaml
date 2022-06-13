@@ -15,11 +15,19 @@ spec:
       labels:
         app: rest01   #XXX
     spec:
+      volumes:
+        - name: makerest01
+          hostPath:
+            path: /temp-app/rest01
+            type: Directory
       containers:
       - name: rest01  
         image: dockerkarelh/kdh-rest01-prodv01
         ports:
         - containerPort: 5001 #not the standard 5000 port
+        volumeMounts:
+         - name: makerest01
+           mountPath: /restservice/
 
 #dit betekent hier komt een nieuwe YAML-file
 ---
@@ -28,8 +36,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: rest01-prodv01-serv  
+  name: rest01-prodv01-serv 
 spec:
+  type: LoadBalancer
   selector: #om te linken naar een Deployment
     app: rest01      #XXX
 #  type: LoadBalancer  
@@ -38,4 +47,4 @@ spec:
       port: 5051  #de pod open poort 5051 als connectie
       targetPort: 5001
       #setting2 voor een external toegang
-#      nodePort: 30501  #moet tussen 30000 en 32767 liggen
+      nodePort: 30501  #moet tussen 30000 en 32767 liggen
