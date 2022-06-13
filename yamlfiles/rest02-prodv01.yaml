@@ -20,7 +20,6 @@ spec:
           nfs:
             server: 10.1.4.10
             path: /temp-app/rest02
-            type: Directory
       containers:
       - name: rest02  
         image: dockerkarelh/kdh-rest02-prodv01
