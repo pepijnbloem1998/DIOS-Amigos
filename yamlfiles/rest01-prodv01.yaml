@@ -28,7 +28,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: rest01-prodv01-serv  
+  name: rest01-prodv01-serv 
+  type: LoadBalancer
 spec:
   selector: #om te linken naar een Deployment
     app: rest01      #XXX
