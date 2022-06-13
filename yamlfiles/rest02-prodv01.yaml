@@ -17,7 +17,8 @@ spec:
     spec:
       volumes:
         - name: makerest02
-          hostPath:
+          nfs:
+            ip: 10.1.4.10
             path: /temp-app/rest02
             type: Directory
       containers:
