@@ -18,7 +18,7 @@ spec:
       volumes:
         - name: makewebsite
           hostPath:
-            path: /temp-apps/testsite
+            path: /temp-app/testsite
             type: Directory
       containers:
       - name: tws  
