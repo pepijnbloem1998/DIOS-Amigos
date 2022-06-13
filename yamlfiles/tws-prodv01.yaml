@@ -22,7 +22,7 @@ spec:
             type: Directory
       containers:
       - name: tws  
-        image: registry.hanubes.han/makewebsite:latest
+        image: dockerkarelh/kdh-testwebsite-prodv01
         ports:
         - containerPort: 80 #the standard 80 port
         volumeMounts:
