@@ -7,7 +7,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 #PROD VERSIE: Kopieer alles wat in de testsite directory staat 
 #naar de html dir in het image
-ADD testsite/ /var/www/html/
+ADD var/lib/jenkins/workspace/Productieomgevingtestsite/testsite /var/www/html/
 
 #het start commando
 CMD /usr/sbin/apache2ctl -D FOREGROUND
