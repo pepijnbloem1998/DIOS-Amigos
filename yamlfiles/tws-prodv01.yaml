@@ -15,19 +15,13 @@ spec:
       labels:
         app: tws   #XXX
     spec:
-      volumes:
-        - name: makewebsite
-          hostPath:
-            path: /temp-app/testsite
-            type: Directory
       containers:
       - name: tws  
-        image: dockerkarelh/kdh-testwebsite-prodv01
+        image: registry.hanubes.han/makewebsite:latest
         ports:
         - containerPort: 80 #the standard 80 port
-        volumeMounts:
-         - name: makewebsite
-           mountPath: /var/www/html/
+      imagePullSecrets:
+        - name: hanubes
 
 #dit betekent hier komt een nieuwe YAML-file
 ---

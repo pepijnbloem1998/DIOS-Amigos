@@ -65,14 +65,14 @@
      <tr>
        <td style="border: solid black 1px";>
          <div class="form" style="text-align: left; padding:5px;height:200px">
-            <h2 style="color:blue;">Dit is een testfunctie voor opzoeken van een land-hoofdstad!</h2>
+            <h2 style="color:blue;">Dit is een testfunctie voor opzoeken van een land-hoofdstad!!</h2>
             <form method="POST" action="" name="opdracht2" id="opdracht2">
               <input type="hidden" id="opdr2" name="opdr2" value="functieHoofdstad">
               <label for="txt_land">Land:</label>
               <input type="text" name="txt_land" id="txt_land">
               <input type="submit" value="Roep hoofdstad functie aan" name="btn_opdracht2" value="btn_opdracht2" >
             </form>
-            <br/><h3 style="color:darkred; margin:0px; padding:0px;">Probeer een Europees land. KDH</h3><br/><br/>
+            <br/><h3 style="color:darkred; margin:0px; padding:0px;">Probeer een Europees land. Denis is een hottie</h3><br/><br/>
             <?php
               echo($html2);
             ?>

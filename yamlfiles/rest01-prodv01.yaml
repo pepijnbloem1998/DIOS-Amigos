@@ -6,7 +6,7 @@ metadata:
   labels:
     app: rest01       #XXX
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: rest01    #XXX
@@ -22,12 +22,14 @@ spec:
             type: Directory
       containers:
       - name: rest01  
-        image: dockerkarelh/kdh-rest01-prodv01
+        image: registry.hanubes.han/makerest01:latest
         ports:
         - containerPort: 5001 #not the standard 5000 port
         volumeMounts:
          - name: makerest01
            mountPath: /restservice/
+      imagePullSecrets:
+        - name: hanubes
 
 #dit betekent hier komt een nieuwe YAML-file
 ---
