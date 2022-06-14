@@ -26,7 +26,7 @@ def valideer(naam,password):
       return "fout"
 
   if naam=="ottop":
-    if password=="geheim":
+    if password=="geheim123":
       return "goed"
     else:
       return "fout"

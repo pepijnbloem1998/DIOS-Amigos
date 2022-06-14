@@ -51,7 +51,7 @@
               <input type="hidden" id="opdr1" name="opdr1" value="functieNL">
               <label for="txt_naam">Naam:</label> 
               <input type=text" name="txt_naam" id="txt_naam">
-              <label for="txt_password">Password:</label>
+              <label for="txt_password">Password!!:</label>
               <input type=text" name="txt_password" id="txt_password">
               <input type="submit" value="Valideer Credentials" name="btn_opdracht1" value="btn_opdracht1" >
             </form>
@@ -72,7 +72,7 @@
               <input type="text" name="txt_land" id="txt_land">
               <input type="submit" value="Roep hoofdstad functie aan" name="btn_opdracht2" value="btn_opdracht2" >
             </form>
-            <br/><h3 style="color:darkred; margin:0px; padding:0px;">Probeer een Europees land.</h3><br/><br/>
+            <br/><h3 style="color:darkred; margin:0px; padding:0px;">Probeer een Europees land. KDH</h3><br/><br/>
             <?php
               echo($html2);
             ?>
