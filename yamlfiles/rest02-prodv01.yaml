@@ -17,9 +17,11 @@ spec:
     spec:
       containers:
       - name: rest02  
-        image: registry.hanubes.han/makerest02
+        image: registry.hanubes.han/makerest02:latest
         ports:
         - containerPort: 5002 #the standard 80 port
+      imagePullSecrets:
+        - name: hanubes
 
 #dit betekent hier komt een nieuwe YAML-file
 ---
