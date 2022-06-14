@@ -15,19 +15,12 @@ spec:
       labels:
         app: rest02   #XXX
     spec:
-      volumes:
-        - name: makerest02
-          hostPath:
-            path: /temp-app/rest02
-            type: Directory
       containers:
       - name: rest02  
-        image: dockerkarelh/kdh-rest02-prodv01
+        image: registry.hanubes.han/makerest02
         ports:
         - containerPort: 5002 #the standard 80 port
-        volumeMounts:
-         - name: makerest02
-           mountPath: /restservice/
+
 #dit betekent hier komt een nieuwe YAML-file
 ---
 
